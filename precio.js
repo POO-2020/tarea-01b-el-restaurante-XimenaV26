@@ -1,4 +1,4 @@
-class Precio {
+export default class Precio {
 
     /**
      * 

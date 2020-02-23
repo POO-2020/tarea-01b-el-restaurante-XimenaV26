@@ -1,11 +1,11 @@
-import Direccion from "./direccion"
+import Direccion from "./direccion.js"
 export default class Cliente{
 
     /**
      * 
      * @param {string} nombre Nombre del cliente
      * @param {number} telefono Numero de telefono 
-     * @param {string} direccion Direccion del cliente
+     * @param {Direccion} direccion Direccion del cliente
      */
     
      constructor(nombre, telefono, direccion){
@@ -15,9 +15,7 @@ export default class Cliente{
     }
 
     getPerfil(){
-        return(`${this.nombre}, Numero: ${this.telefono}, Direccion: ${this.direccion}`)
+        return(`${this.nombre}, Numero: ${this.telefono}, Direccion: ${this.direccion.getFormatoCorto()}`);
     }
 }
 
-let cliente1 = new Cliente("Juanito", 312456789, new Direccion("Benito", 23, 6, "Col. Arboledas", 28976, "Colima", "Col"));
-console.log(cliente1.getPerfil());

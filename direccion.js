@@ -23,7 +23,7 @@ export default class Direccion{
     getFormatoCorto(){
         let calle = this.calle; 
         let numExterior = this.numeroExterior; 
-        return(`${this.calle} ${this.numeroExterior}`);
+        return(`${this.calle} # ${this.numeroExterior}`);
     }
 
     getFormatoExtendido(){
@@ -34,11 +34,9 @@ export default class Direccion{
         let codigoPostal = this.codigoPostal;
         let ciudad = this.ciudad;
         let municipio = this.municipio;
-        return(`${this.calle} ${this.numeroExterior}, Num.Interior; ${this.numeroInterior}, Colonia ${this.colonia}, Codigo postal: ${this.codigoPostal}, ${this.ciudad}, ${this.municipio}`);
+        return(`${this.calle} # ${this.numeroExterior}, Num.Interior: ${this.numeroInterior}, Colonia: ${this.colonia}, Codigo postal: ${this.codigoPostal}, ${this.ciudad}, ${this.municipio}`);
     }
 }
 
-let direc1 = new Direccion("Benito", 23, 6, "Arboledas", 28976, "Colima", "Col")
-console.log(direc1.getFormatoCorto());
-console.log(direc1.getFormatoExtendido());
+
 

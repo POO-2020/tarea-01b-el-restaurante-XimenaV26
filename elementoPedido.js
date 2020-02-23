@@ -1,8 +1,10 @@
-class ElementoPedido {
+import Producto from "./producto.js";
+import Precio from "./precio.js";
+export default class ElementoPedido {
 
     /**
      * 
-     * @param {string} producto Nombre del producto con su precio
+     * @param {Producto} producto Nombre del producto con su precio
      * @param {number} cantidad Cantidad del producto comprado
      */
 
@@ -12,6 +14,9 @@ class ElementoPedido {
     }
 
     getDescripcion(){
-        return(`${this.cantidad} x ${this.producto}`);
+        let suma = this.cantidad * this.producto.precio.valor;
+        return(`${this.cantidad} x ${this.producto.nombre} = ${suma}`);
     }
+
+
 }
