@@ -13,7 +13,7 @@ export default class Producto {
     }
 
     getDescripcion(){
-        return(`${this.producto}  ${this.precio.getPrecio()}`);
+        return(`${this.nombre}  ${this.precio.getPrecio()}`);
 
     }
 }

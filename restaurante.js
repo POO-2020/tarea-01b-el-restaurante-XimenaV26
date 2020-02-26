@@ -35,7 +35,7 @@ export default class Restaurante{
     }
 
     registrarPedido(pedido){
-        this.pedido.push(pedido);
+        this.pedidos.push(pedido);
     }
 
     listarPedido(){
